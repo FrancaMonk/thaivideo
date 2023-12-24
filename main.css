@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('https://media.discordapp.net/attachments/385165815453843459/1188554716788052069/sua_imagem.jpg?ex=659af2d6&is=65887dd6&hm=25323edbb11dd35d823a0fea76e981347ffb44d940443df277e29fa696137103&=&format=webp&width=1202&height=676');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#options-message {
+  display: none;
+}
+#hint-button {
+  display: none;
+}
+.login-box p {
+  margin-bottom: 10px;
+}
+.content {
+  display: none;
+  text-align: center;
+  background-color: #FFF3F2;
+  padding: 20px;
+  border-radius: 25px; /* Adiciona bordas arredondadas */
+}
+
+.content.visible {
+  display: block;
+}
+
+.logged-in-content {
+  color: black;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza conteúdo verticalmente */
+}
+
+.text-section {
+  margin-bottom: 20px;
+}
+
+.video-section {
+  width: 80%;
+  max-width: 1000px; /* Aumenta o tamanho máximo do vídeo */
+  display: flex;
+}
+
+.video-section video {
+  width: 100%; /* Ajusta o tamanho do vídeo */
+  height: auto; /* Mantém a proporção */
+}
+
+
+
+
+/* Estilos para a caixa de login */
+.login-container {
+  text-align: center;
+}
+
+.login-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+
+  color: #192d3e;
+
+}
+.botãodica {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: pink;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  font-size: 15px;
+  background-color: purple; 
+  color: white; 
+  transition: background-color 0.3s;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.botãodica:hover {
+  background-color: rebeccapurple; 
+  cursor: pointer; 
+}
+
+
+.input-group input{
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.input-group button {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: pink;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  font-size: 15px;
+  background-color: purple;
+  color: white;
+  transition: background-color 0.3s; 
+}
+
+.input-group button:hover {
+  background-color: rebeccapurple;
+
+}
+.content {
+  display: none;
+  text-align: center;
+}
+
+.content.visible {
+  display: block;
+}
+
+
+.login-box p {
+  color: #800080;
+  font-weight: 600;
+}

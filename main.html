@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Presente Especial</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Faça login meu amor!</h1>
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Usuário" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Senha" required>
+                </div>
+                <div class="input-group">
+                    <button type="submit">Entrar!</button>
+                </div>
+            </form>
+            <p id="login-message"></p>
+            <p id="options-message" style="display: none;"></p>
+            <button id="hint-button" style="display: none;" class="botãodica">Quer uma dica?</button>
+            <p id="hint-message"></p>
+        </div>
+    </div>
+
+    <div class="content hidden">
+        <div class="logged-in-content">
+            <div class="text-section">
+                <h2 style="color: #800080; font-weight: 600; font-size: 35px;">Oi amor, esse é seu último presente!!!</h2>
+                <h3 style="color: #800080; font-weight: 600; font-size: 25px; margin-top: -20px;">Recomendo que use fones!!</h3>
+            </div>
+            <div class="video-section">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SlZ807B0Y8U?si=LW5Mf1bc4_FanLjS&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <div class="text-section">
+            <h3 style="color: red; font-weight: 600; font-size: 30px;">Te amo muito! 💖💖</h3>
+            <h3 style="color: black; font-weight: 600; font-size: 12px; margin-top: -25px;">Código não ficou maravilhoso <br> mas foi de coração!</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const content = document.querySelector('.content');
+        const video = document.getElementById('myVideo');
+        const loginMessage = document.getElementById('login-message');
+        const helpLink = document.getElementById('help-link');
+        const helpText = document.getElementById('help-text');
+        const optionsMessage = document.getElementById('options-message');
+        const hintButton = document.getElementById('hint-button');
+        const hintMessage = document.getElementById('hint-message');
+
+        const username = 'Thai';
+        const password = '17022023';
+
+        let loginAttempts = 0;
+
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const enteredUsername = document.getElementById('username').value;
+            const enteredPassword = document.getElementById('password').value;
+
+            if (enteredUsername === username && enteredPassword === password) {
+                content.classList.add('visible');
+                document.querySelector('.login-container').style.display = 'none';
+                video.src = 'caminho_do_seu_video.mp4';
+            } else {
+                loginAttempts++;
+                if (loginAttempts === 2) {
+                    optionsMessage.style.display = 'block';
+                    hintButton.style.display = 'block';
+                }
+                if (loginAttempts > 2) {
+                    loginMessage.innerHTML  = 'Login: Seu apelido <br> Senha: Nossa data amor!';
+                    helpLink.style.display = 'none';
+                    helpText.innerHTML  = 'Login: Seu apelido <br> Senha: Nossa data amor!';
+                }
+                alert('Usuário ou senha incorretos!');
+            }
+        });
+
+        hintButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            hintMessage.innerHTML  = "Login: Thai <br> Senha: Nossa data especial!";
+        });
+    </script>
+</body>
+
+</html>
